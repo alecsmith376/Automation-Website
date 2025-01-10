@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Finance Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and global styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(to bottom right, #23395B, #1A1A2E);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: #1A1A2E;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #50C6E1;
+        }
+
+        /* Section styling */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            margin: 20px auto;
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+
+        .cta-button {
+            background-color: #23395B;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #1A1A2E;
+        }
+
+        /* Pricing table */
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background-color: white;
+            border: 1px solid #DDD;
+            padding: 40px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #23395B;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Form styling */
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #CCC;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        form button {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Automated Finance Solutions</h1>
+        <p>Your trusted partner for invoice automation, expense tracking, and more.</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer tailored financial automation solutions designed to streamline your workflows and improve efficiency.</p>
+        <div class="pricing-table">
+            <div class="pricing-card">
+                <h3>Invoice Automation</h3>
+                <p>Create and send invoices automatically based on sales records.</p>
+                <p>Integrates with Excel, Google Sheets, QuickBooks, and more.</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Expense Tracking</h3>
+                <p>Track and categorise expenses effortlessly.</p>
+                <p>Generate automated reports with real-time updates.</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Payment Follow-Ups</h3>
+                <p>Send automated reminders for overdue payments.</p>
+                <p>Ensure timely payments with minimal manual effort.</p>
+            </div>
+        </div>
+        <button class="cta-button">Book a Free Demo</button>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-table">
+            <div class="pricing-card">
+                <h3>Starter Package</h3>
+                <p>£100 - One-time workflow setup</p>
+                <p>Includes basic invoice automation and integration.</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Professional Package</h3>
+                <p>£300/month - Subscription service</p>
+                <p>Includes advanced custom workflows, expense tracking, and ongoing support.</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise Package</h3>
+                <p>£500/month - Full automation suite</p>
+                <p>Includes all services, priority support, and personalised dashboards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Automated Finance Solutions, we specialise in delivering bespoke financial automation services for small and medium-sized businesses. Our mission is to free up your time by automating repetitive tasks, allowing you to focus on growing your business.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Automated Finance Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>
