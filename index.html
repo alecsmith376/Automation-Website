@@ -215,19 +215,17 @@
                 })
             })
             .then(response => {
-                if (response.ok) {
-                    return response.json();
+                if (response.status === 200) {
+                    alert('Thank you for reaching out! We will get back to you shortly.');
+                    document.querySelector('form').reset();
                 } else {
-                    throw new Error('Network response was not ok');
+                    console.error('Error details:', response.status, response.statusText);
+                    alert(`There was an error submitting your message. Please try again later (Error ${response.status}: ${response.statusText}).`);
                 }
-            })
-            .then(data => {
-                alert('Thank you for reaching out! We will get back to you shortly.');
-                document.querySelector('form').reset();
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('There was an error submitting your message. Please try again.');
+                alert('There was a network error. Please check your connection and try again.');
             });
         });
     </script>
