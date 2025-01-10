@@ -17,9 +17,16 @@
             text-align: center;
             padding: 50px 20px;
         }
-        header img {
-            height: 120px;
+        header .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 20px;
+        }
+        header img {
+            max-width: 200px; /* Slightly larger */
+            height: auto;
+            border-radius: 8px; /* To keep it sleek */
         }
         header h1 {
             font-size: 2.5em;
@@ -115,8 +122,10 @@
 </head>
 <body>
     <header>
-        <!-- Logo added -->
-        <img src="High-Resolution-Color-Logo.png" alt="Company Logo">
+        <!-- Logo section -->
+        <div class="logo-container">
+            <img src="High-Resolution-Color-Logo.png" alt="Company Logo">
+        </div>
         <h1>Automated Finance Solutions</h1>
         <p>Your trusted partner for invoice automation, expense tracking, and more.</p>
     </header>
