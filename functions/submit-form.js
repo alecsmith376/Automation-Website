@@ -1,4 +1,4 @@
-const fetch = require('node-fetch'); // Import fetch for HTTP requests
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') {
