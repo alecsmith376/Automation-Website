@@ -9,7 +9,7 @@ exports.handler = async (event) => {
     }
 
     try {
-        const data = JSON.parse(event.body); // Parse the form data
+        const data = JSON.parse(event.body); // Parse incoming form data
         const { name, email, message } = data;
 
         if (!name || !email || !message) {
@@ -19,13 +19,19 @@ exports.handler = async (event) => {
             };
         }
 
-        // Send data to Zapier Webhook
+        // Send data to Zapier with `querystring` keys
         const response = await fetch('https://hooks.zapier.com/hooks/catch/21274903/2zwyz5w/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, message }),
+            body: JSON.stringify({
+                querystring: {
+                    name,
+                    email,
+                    message,
+                },
+            }),
         });
 
         if (!response.ok) {
