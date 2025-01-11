@@ -9,7 +9,7 @@ exports.handler = async (event) => {
     }
 
     try {
-        const data = JSON.parse(event.body); // Parse the form data
+        const data = JSON.parse(event.body); // Parse form data
         const { name, email, message } = data;
 
         if (!name || !email || !message) {
@@ -19,17 +19,21 @@ exports.handler = async (event) => {
             };
         }
 
-        // Send data to Zapier Webhook
-        const response = await fetch('https://hooks.zapier.com/hooks/catch/21274903/2zwyz5w/', {
+        // Send data to Google Apps Script Web App URL
+        const response = await fetch('https://script.google.com/macros/s/AKfycbz0kOW-rpFmYX31UhuVrlemQ9rSpxtGVWzjDR1kcDm6cFSL5FQPaqmsQGSdvGoml6YYEg/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, message }), // No nesting
+            body: JSON.stringify({
+                name,
+                email,
+                message,
+            }),
         });
 
         if (!response.ok) {
-            throw new Error(`Error from Zapier: ${response.statusText}`);
+            throw new Error(`Error from Web App: ${response.statusText}`);
         }
 
         return {
