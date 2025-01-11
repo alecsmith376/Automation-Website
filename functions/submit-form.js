@@ -19,18 +19,16 @@ exports.handler = async (event) => {
             };
         }
 
-        // Send data to Zapier with `querystring` keys
+        // Send data to Zapier as top-level JSON fields
         const response = await fetch('https://hooks.zapier.com/hooks/catch/21274903/2zwyz5w/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                querystring: {
-                    name,
-                    email,
-                    message,
-                },
+                name,   // send name as top-level
+                email,  // send email as top-level
+                message // send message as top-level
             }),
         });
 
