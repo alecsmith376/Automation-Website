@@ -211,6 +211,7 @@
         <p>&copy; 2025 Automated Finance Solutions. All rights reserved.</p>
     </footer>
 
+    <!-- Contact Form Script -->
     <script>
         document.querySelector('form').addEventListener('submit', async function (event) {
             event.preventDefault();
@@ -224,12 +225,12 @@
             }
 
             try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbz0kOW-rpFmYX31UhuVrlemQ9rSpxtGVWzjDR1kcDm6cFSL5FQPaqmsQGSdvGoml6YYEg/exec', {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbx1XInlmVuS72jRcCnNlXZyT0zSFtDC6YTkwwBa68B4p-atd4gO3AcIzRJBDKmPaEjcAQ/exec', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Content-Type': 'application/json',
                     },
-                    body: new URLSearchParams({
+                    body: JSON.stringify({
                         name: name,
                         email: email,
                         message: message
