@@ -24,9 +24,9 @@
             margin-bottom: 20px;
         }
         header img {
-            max-width: 200px; /* Slightly larger */
+            max-width: 200px;
             height: auto;
-            border-radius: 8px; /* To keep it sleek */
+            border-radius: 8px;
         }
         header h1 {
             font-size: 2.5em;
@@ -224,12 +224,12 @@
             }
 
             try {
-                const response = await fetch('https://hooks.zapier.com/hooks/catch/21274903/2zwyz5w/', {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbz0kOW-rpFmYX31UhuVrlemQ9rSpxtGVWzjDR1kcDm6cFSL5FQPaqmsQGSdvGoml6YYEg/exec', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: JSON.stringify({
+                    body: new URLSearchParams({
                         name: name,
                         email: email,
                         message: message
